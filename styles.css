@@ -1,0 +1,87 @@
+
+body{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.img-box{
+    width: 236px;
+    height: 419px;;
+    overflow: hidden;
+    border-radius: 20px;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, 50%);
+    color: white;
+}
+
+.img-box::before{
+    content:"";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.pinterest_img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left:0;
+    object-position: center;
+    
+}
+
+.save-button{
+    background-color: red;
+    
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index: 3;
+    border-radius: 40%;
+    border:none;
+    padding: 10px;
+    display:none;
+
+}
+
+.img-box:hover .save-button{
+    display: block;
+}
+
+
+.img-box:hover .img_links{
+    display: block;
+}
+
+
+.img-box:hover .pinterest_img{
+    opacity: 0.7;
+
+}
+
+.img_links{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    z-index: 3;
+    padding: 10px;
+    display:none;
+}
+
+.img_links div {
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    display: inline-block;
+    border-radius: 30px;
+    font-weight: 200;
+}
